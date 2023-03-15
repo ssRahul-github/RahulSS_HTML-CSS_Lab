@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Of Dropdown</title>
+
+    <style>
+        header{
+            top: 2px;
+            padding: 10px;
+            position: fixed;
+            text-align: center;
+            vertical-align: middle;
+            font-size: xx-large;
+            z-index: 1;
+            padding-top: 20px;
+            background-color: red;
+            width: 100%;
+            height: 50px;
+        }
+        nav{ 
+            margin-top: 80px;
+            width: inherit;
+        }
+
+        .menu-styling{
+        
+            list-style-type: none;
+            background-color: gray;
+            padding: 0;
+        margin: 0;
+        }
+    
+        #main-menu > li {
+            display: inline;
+        }
+    
+        #main-menu > li > a {
+            display: inline-block;
+            padding: 10px;
+            text-decoration: none;
+            color: white;
+        }
+    
+        #main-menu > li > a:hover{
+            background-color: black;
+        }
+    
+        #main-menu-item-2, #main-menu-item-3{
+        position: relative;
+        }
+    
+        #sub-menu-1, #sub-menu-2{
+        position: absolute; 
+        display: none;  
+        top: 28px;
+        padding: 15px;
+        left: 0px;
+        white-space: nowrap;
+    
+        
+        }
+    
+        #main-menu-item-2:hover #sub-menu-1{
+        display: block;
+        }
+        #main-menu-item-3:hover #sub-menu-2{
+        display: block;
+        }
+    
+        .sub-menu-styling{
+        list-style-type: none;
+        background-color:lightgray;
+        padding: 0;
+        margin: 0px;
+        }
+    
+        #sub-menu-1>li>a, #sub-menu-2>li>a{
+            
+            text-decoration: none;
+        }
+    
+        #sub-menu-1>li>a:hover, #sub-menu-2>li>a:hover{
+            background-color: white;
+        }
+    
+    
+        #sub-menu-1>li,  #sub-menu-2>li{
+            padding: 7px;
+        }
+    </style>
+</head>
+
+
+<body>
+    <header>
+        Demo Of Dropdown
+    </header>
+    <nav>
+        <ul id="main-menu" class="menu-styling">
+          <li>
+            <a href="/link1">Link1</a>        
+          </li>
+          <li id="main-menu-item-2">
+            <a href="/link2">Link2</a> 
+            
+            <ul id="sub-menu-1" class="sub-menu-styling">
+              <li>
+                <a href="/dd-link1">DD_Link_1</a>        
+              </li>
+              <li>
+                <a href="/dd-link2">DD_Link_2</a>   
+              </li>
+              <li>  
+                <a href="/dd-link3">DD_Link_3</a>        
+              </li>
+            </ul>
+    
+          </li>
+          <li id="main-menu-item-3">  
+            <a href="/link3">Link3</a>
+            <ul id="sub-menu-2" class="sub-menu-styling">
+                <li>
+                  <a href="/dd-link1">DD_Link_1</a>        
+                </li>
+                <li>
+                  <a href="/dd-link2">DD_Link_2</a>   
+                </li>
+                <li>  
+                  <a href="/dd-link3">DD_Link_3</a>        
+                </li>
+                <li>  
+                    <a href="/dd-link3">DD_Link_4</a>        
+                </li>
+            </ul>        
+          </li>
+        </ul>
+      </nav>
+</body>
